@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/querydsl
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create # application loading 시점에 table drop 하고 재 생성, 테스트 적합
+    properties:
+      hibernate:
+        #show_sql: true # sysout으로 sql을 확인하는 방식
+        format_sql: true
+
+logging.level:
+  org.hibernate.SQL: debug # logging으로 sql을 확인하는 방식
+  org.hibernate.type: trace # log에서 binding parameter를 확인할 수 있음(p6spy 설정 아님)
