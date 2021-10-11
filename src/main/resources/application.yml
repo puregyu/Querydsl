@@ -12,6 +12,7 @@ spring:
       hibernate:
         #show_sql: true # sysout으로 sql을 확인하는 방식
         format_sql: true
+        use_sql_comments: true # querydsl는 JPQL builder 역할을 한다. 결과적으로 querydsl은 JPQL이 된다. SQL뿐만 아니라 JPQL도 확인할 때 쓰는 설정
 
 logging.level:
   org.hibernate.SQL: debug # logging으로 sql을 확인하는 방식
