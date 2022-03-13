@@ -42,7 +42,7 @@ class MemberTest {
         entityManager.flush(); // 영속성 컨텍스트에 있는 쿼리를 DB에 날림
         entityManager.clear(); // 영속성 컨텍스트를 실제로 비워 캐시 초기화
 
-        //확인
+        // 확인 JPQL
         List<Member> members = entityManager.createQuery("select m from Member m", Member.class)
                 .getResultList();
 
